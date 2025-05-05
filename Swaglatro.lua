@@ -105,7 +105,12 @@ AltTexture({
     "j_drivers_license", 
     "j_cartomancer", 
     "j_astronomer", 
-    "j_burnt"
+    "j_burnt",
+    'j_caino',
+    'j_chicot',
+    'j_perkeo',
+    'j_triboulet',
+    'j_yorick'
 },
     loc_txt = {
         name = "Swaglandia Jokers"
@@ -158,6 +163,7 @@ AltTexture({
 })
 
 --this needs to be seperated like this in order to patch vanilla names with new ones
+--we dont need to specify a new texture here, so im leaving it until pack is final
 AltTexture{ 
     key = 'SwagLegends', 
     set = 'Joker', 
@@ -171,11 +177,11 @@ AltTexture{
     },
     original_sheet = true,
     localization = { -- keys of objects with new localizations
-        j_caino = {name = '{C:enhanced,E:2,s:1.1}Sunn{}'},
-        j_chicot = {name = '{C:enhanced,E:2,s:1.1}Zappy{}'},
-        j_perkeo = {name = '{C:enhanced,E:2,s:1.1}Robely{}'},
-        j_triboulet = {name = '{C:enhanced,E:2,s:1.1}Arman{}'},
-        j_yorick = {name = '{C:enhanced,E:2,s:1.1}Axue{}'}
+        j_caino = {name = '{C:white,E:2,s:1.1}Sunn{}'},
+        j_chicot = {name = '{C:mult,E:2,s:1.1}Zappy{}'},
+        j_perkeo = {name = '{C:green,E:2,s:1.1}Robely{}'},
+        j_triboulet = {name = '{C:chips,E:2,s:1.1}Arman{}'},
+        j_yorick = {name = '{C:gold,E:2,s:1.1}Axue{}'}
      }
 }
 
