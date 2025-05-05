@@ -10,11 +10,11 @@ associated with the server. All card artwork is done by Robely with
 edits and code by MulliganMayhem.
 
 ## Key Features
-  -Joker Replacement
-  -Minor text replacement
-  -Custom Challenge (tbd)
-  -Card variants for High Contrast consistency (tbd)
-  -and more
+  `-Joker Replacement`
+  `-Minor text replacement`
+  `-Custom Challenges (8/10 done)`
+  `-Card variants for High Contrast consistency`
+  `-and more`
 
 ## Prerequisites
 Other than Balatro itself, the following tools and mods are required:
