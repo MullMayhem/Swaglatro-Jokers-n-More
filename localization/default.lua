@@ -1,4 +1,11 @@
 return {
+    descriptions={
+        alt_texture = {
+            alt_tex_swagtro_j_SwagLegends = {
+                name = 'Swaglandia Legends',
+            }
+        },
+    },
     misc = {
         dq_1={
             "Yikes! I hope you",
@@ -30,8 +37,8 @@ return {
             "how to get game",
         },
         lq_6={
-            "Oh no, were you",
-            "bluffing too?",
+            "maybe Battlefield",
+            "is more your speed...",
         },
         lq_7={
             "wait, this isn't",
@@ -41,16 +48,16 @@ return {
             "I think I am drank",
         },
         lq_9={
-            "I'm literally",
-            "a fool, what's",
-            "your excuse?",
+            "Damn I could have been",
+            "eating food this whole time,", 
+            "too bad!",
         },
         wq_1={
-            "You Aced it!",
+            "I'M GONNA JACK OFFFFFFFFFFFFFFF",
         },
         wq_2={
-            "You dealt with",
-            "that pretty well!",
+            "Oo oo oo oo I like him",
+            "being on top... wait actually",
         },
         wq_3={
             "You've got my respect, but",
@@ -63,8 +70,7 @@ return {
             "virtual...",
         },
         wq_5={
-            "Looks like I've",
-            "taught you well!",
+            "Yippee :D",
         },
         wq_6={
             "I don't need",
@@ -72,9 +78,8 @@ return {
             "need you",
         },
         wq_7={
-            "Good thing",
-            "I didn't bet",
-            "against you!",
+            "You did it!!",
+            "Can we do SlashCo now?",
         },
     }
 }
