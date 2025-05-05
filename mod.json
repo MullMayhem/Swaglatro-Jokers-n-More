@@ -1,0 +1,17 @@
+{
+	"id": "swaglatrojokers",
+	"name": "Swaglandia Balatro - Jokers+",
+	"author": [
+		"Robely"
+	],
+	"description": "Turns all jokers into Swaglandia members. Art by Robely, mod managed by MulliganMayhem",
+	"prefix": "swaglatrojokers",
+	"main_file": "Swaglatro.lua",
+	"badge_colour": "ffffff",
+	"badge_text_colour": "000000",
+	"version": "1.0.0",
+	"dependencies": [
+		"Steamodded (>=1.*)",
+		"malverk"
+	]
+}
