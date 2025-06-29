@@ -688,7 +688,6 @@ SMODS.Challenge{
             {id = 'j_steel_joker'},
             {id = 'j_throwback'},
             {id = 'j_hanging_chad'},
-            {id = 'j_perkeo'},
             {id = 'c_empress'},
             {id = 'c_high_priestess'},
             {id = 'c_heirophant'},
