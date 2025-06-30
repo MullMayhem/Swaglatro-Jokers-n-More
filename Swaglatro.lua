@@ -199,7 +199,8 @@ AltTexture({
     original_sheet = true,
     localization = true,
     keys = { 
-    "c_moon"
+    "c_moon",
+    "c_sun"
     },
     loc_txt = {
         name = "Consumables"
