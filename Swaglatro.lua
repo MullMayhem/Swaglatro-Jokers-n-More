@@ -511,7 +511,7 @@ start_runref(self, args)
 
                     --if blind is called Small Blind or Big Blind, change background
                     if blindname == 'Small Blind' or blindname == 'Big Blind' or blindname == '' then
-                        ease_background_colour{new_colour = G.C.GREEN, special_colour = G.C.UI.TEXT_INACTIVE, tertiary_color = G.C.WHITE, contrast = 6}
+                        ease_background_colour{new_colour = G.C.GREEN, special_colour = G.C.GREEN, tertiary_color = G.C.WHITE, contrast = 6}
                     end
                 else 
                     OldFunctionBG(state,blind_override)
@@ -897,16 +897,36 @@ SMODS.Challenge{
     },
     restrictions = {
         banned_cards = {
+            {id = 'j_joker'},
             {id = 'j_jolly'},
             {id = 'j_zany'},
             {id = 'j_mad'},
             {id = 'j_crazy'},
             {id = 'j_droll'},
+            {id = 'j_half'},
+            {id = 'j_stone'},
+            {id = 'j_marble'},
+            {id = 'j_steel_joker'},
+            {id = 'j_golden'},
+            {id = 'j_glass'},
+            {id = 'j_abstract'},
+            {id = 'j_scholar'},
+            {id = 'j_mr_bones'},
+            {id = 'j_astronomer'},
+            {id = 'j_matador'},
+            {id = 'j_ring_master'},
+            {id = 'j_smeared'},
+            {id = 'j_gros_michel'},
+            {id = 'j_stuntman'},
+            {id = 'j_faceless'},
+            {id = 'j_cavendish'},
+            {id = 'j_luchador'},
             {id = 'j_caino'},
             {id = 'j_sly'},
             {id = 'c_sun'},
             {id = 'c_world'},
-            {id = 'c_strength'}
+            {id = 'c_strength'},
+            {id = 'c_sigil'}
         },
         banned_tags = {
             {id = 'tag_orbital'},
