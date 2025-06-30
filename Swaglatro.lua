@@ -1121,7 +1121,7 @@ SMODS.Challenge{
         modifiers = {
             --{id = 'dollars', value = 100},
             {id = 'discards', value = 0},
-            --{id = 'hands', value = 6},
+            {id = 'hands', value = 0},
             --{id = 'reroll_cost', value = 10},
             {id = 'joker_slots', value = 10},
             --{id = 'consumable_slots', value = 3},
@@ -1149,7 +1149,7 @@ SMODS.Challenge{
         --no_ranks = {['4'] = true},
         --yes_suits = {S=true},
         --no_suits = {D=true},
-        cards = {{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',}},
+        cards = {{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',}},
         type = 'Challenge Deck'
     },
     restrictions = {
@@ -1162,7 +1162,6 @@ SMODS.Challenge{
             {id = 'j_delayed_grat'},
             {id = 'j_vampire'},
             {id = 'j_drunkard'},
-            {id = 'j_ancient'},
             {id = 'j_rough_gem'},
             {id = 'j_bloodstone'},
             {id = 'j_onyx_agate'},
@@ -1172,6 +1171,7 @@ SMODS.Challenge{
             {id = 'j_seeing_double'},
             {id = 'j_hit_the_road'},
             {id = 'j_burnt'},
+            {id = 'j_idol'},
             {id = 'c_magician'},
             {id = 'c_empress'},
             {id = 'c_heirophant'},
@@ -1179,6 +1179,7 @@ SMODS.Challenge{
             {id = 'c_chariot'},
             {id = 'c_devil'},
             {id = 'c_tower'},
+            {id = 'c_temperance'},
             {id = 'c_star'},
             {id = 'c_moon'},
             {id = 'c_sun'},
@@ -1200,12 +1201,12 @@ SMODS.Challenge{
 
 --robely hell challenge localization
 G.localization.misc.v_text.ch_c_robely_hell = {
-    "No {C:red}discards{}"
+    "No {C:red}discards{} and a {C:red}rapidly shrinking deck...{}"
 }
 
 --robely hell challenge localization
 G.localization.misc.v_text.ch_c_robely_hell2 = {
-    "Rapidly shrinking deck"
+    "Scoring won't be an issue... until you run out of cards..."
 }
 
 --Sample 9 Challenge
