@@ -24,10 +24,11 @@ end
 AltTexture({
     key = 'SwagJokers',
     set = 'Joker',
-    path = 'Jokers.png',
+    path = 'SwagLegends.png',
     display_pos = 'j_blueprint',
     original_sheet = true,
-    keys = {"j_joker",  --this is placeholder until all jokers are made, this is list of all jokers changed
+    keys = {--this is placeholder until all jokers are made, this is list of all jokers changed
+    "j_joker",  
     "j_greedy_joker", 
     "j_lusty_joker", 
     "j_wrathful_joker", 
@@ -44,23 +45,33 @@ AltTexture({
     "j_crafty", 
     "j_half", 
     "j_stencil", 
-    "j_mime", 
+    "j_four_fingers",
+    "j_mime",
+    "j_banner",
     "j_marble", 
+    "j_loyalty_card",
     "j_misprint", 
+    "j_dusk",
     "j_raised_fist", 
     "j_chaos", 
     "j_steel_joker", 
+    "j_scary_face",
     "j_abstract", 
+    "j_delayed_grat",
     "j_hack", 
+    "j_gros_michel",
     "j_even_steven", 
     "j_odd_todd", 
     "j_scholar", 
+    "j_business",
     "j_ride_the_bus", 
     "j_space", 
     "j_egg", 
     "j_burglar", 
     "j_blackboard", 
     "j_runner", 
+    "j_ice_cream",
+    "j_dna",
     "j_blue_joker", 
     "j_sixth_sense", 
     "j_constellation", 
@@ -68,40 +79,62 @@ AltTexture({
     "j_faceless", 
     "j_green_joker", 
     "j_todo_list", 
+    "j_cavendish",
     "j_card_sharp", 
+    "j_red_card",
     "j_madness", 
     "j_square", 
     "j_riff_raff", 
     "j_vampire", 
+    "j_shortcut",
     "j_hologram", 
     "j_vagabond", 
     "j_baron", 
+    "j_cloud_9",
+    "j_rocket",
     "j_midas_mask", 
     "j_luchador", 
     "j_photograph", 
+    "j_gift",
+    "j_mail",
     "j_hallucination", 
     "j_fortune_teller", 
+    "j_juggler",
+    "j_drunkard",
     "j_stone", 
     "j_golden", 
+    "j_lucky_cat",
     "j_baseball", 
+    "j_bull",
+    "j_diet_cola",
     "j_trading", 
     "j_flash", 
+    "j_trousers",
+    "j_ancient",
     "j_selzer", 
+    "j_castle",
+    "j_smiley",
     "j_mr_bones", 
+    "j_acrobat",
+    "j_sock_and_buskin",
     "j_swashbuckler", 
+    "j_troubadour",
     "j_certificate", 
     "j_smeared", 
     "j_throwback", 
+    "j_hanging_chad",
     "j_glass", 
     "j_ring_master", 
     "j_blueprint", 
     "j_wee", 
     "j_merry_andy", 
+    "j_idol",
     "j_matador", 
     "j_hit_the_road", 
     "j_stuntman", 
     "j_invisible", 
     "j_brainstorm", 
+    "j_shoot_the_moon",
     "j_drivers_license", 
     "j_cartomancer", 
     "j_astronomer", 
@@ -114,23 +147,30 @@ AltTexture({
 },
     loc_txt = {
         name = "Swaglandia Jokers"
-    }
+    },
+    localization = { -- keys of objects with new localizations
+        j_misprint = {name = 'Error Joker'},
+        j_todo_list = {name = 'Convention Attendees'},
+        j_vagabond = {name = '[Insert Rename Here]'},
+        j_diet_cola = {name = 'Josh'},
+        j_selzer = {name = 'Swag Soda'}
+     }
 })
 
 --this does nothing atm, just there for menu testing
 --if you are to implement planets, it would be a seperate texture sheet with only planet graphics that are changed. this is for mod compatibility
-AltTexture({ 
-    key = 'SwagPlanets',
-    set = 'Planet',
-    path = 'Tarots.png',
-    original_sheet = true,
-    localization = true,
-    keys = {       
-    },
-    loc_txt = {
-        name = "Planets (None)"
-    }
-})
+--AltTexture({ 
+--    key = 'SwagPlanets',
+--    set = 'Planet',
+--    path = 'Tarots.png',
+--    original_sheet = true,
+--    localization = true,
+--    keys = {       
+--    },
+--    loc_txt = {
+--        name = "Planets (None)"
+--    }
+--})
 
 --this does nothing atm, just there for menu testing
 --if you are to implement spectrals, have a seperate sheet from 'SwagPlanets' with just spectral cards. this is for mod compatibility
@@ -141,14 +181,31 @@ AltTexture({
     original_sheet = true,
     localization = true,
     keys = { 
-    "c_cryptid"      
+    "c_cryptid",
+    "c_wraith"
     },
     loc_txt = {
-        name = "Spectrals (None)"
+        name = "Spectrals"
     }
 })
 
 --this does nothing atm, just there for menu testing
+--if you are to implement spectrals, have a seperate sheet from 'SwagPlanets' with just spectral cards. this is for mod compatibility
+AltTexture({ 
+    key = 'SwagTarots',
+    set = 'Tarot',
+    path = 'Tarots.png',
+    original_sheet = true,
+    localization = true,
+    keys = { 
+    "c_moon"
+    },
+    loc_txt = {
+        name = "Consumables"
+    }
+})
+
+
 --if you are to implement seals, have it seperated or just a blank img with only seals. This way it does not conflict with other enhancements
 AltTexture({
     key = 'SwagSeals',
@@ -231,8 +288,9 @@ TexturePack{ --last entry is top of list, first entry is bottom of list
     textures = {
     'swagtro_j_SwagJokers',
     'swagtro_j_SwagLegends',
-    'swagtro_j_SwagPlanets',
+--    'swagtro_j_SwagPlanets',
     'swagtro_j_SwagSpectrals',
+    'swagtro_j_SwagTarots',
     'swagtro_j_SwagAltSpades',
     'swagtro_j_SwagAltSpades2',
     'swagtro_j_SwagSeals'
@@ -1052,59 +1110,104 @@ G.localization.misc.v_text.ch_c_oops_nitro = {
 
 --Sample 8 Challenge
 SMODS.Challenge{ 
-    loc_txt = "test9",
-    key = 'c_mod_swg_test_9',
+    loc_txt = "Robely Hell",
+    key = 'c_mod_swg_robelyhell',
     rules = {
         custom = {
-            {id = 'minus_jokers_per_dollar', value = 6},
-            {id = 'overflow_perishable'},
-            {id = 'anaglyph', value = localize{type = 'name_text', set = 'Tag', key = 'tag_investment', nodes = {}}, tag = 'investment'},
+            --{id = 'minus_jokers_per_dollar', value = 6},
+            --{id = 'overflow_perishable'},
+            --{id = 'anaglyph', value = localize{type = 'name_text', set = 'Tag', key = 'tag_investment', nodes = {}}, tag = 'investment'},
+            {id = 'robely_hell'},
+            {id = 'robely_hell2'}
     },
         modifiers = {
-            {id = 'dollars', value = 100},
-            {id = 'discards', value = 1},
-            {id = 'hands', value = 6},
-            {id = 'reroll_cost', value = 10},
-            {id = 'joker_slots', value = 8},
-            {id = 'consumable_slots', value = 3},
-            {id = 'hand_size', value = 5},
+            --{id = 'dollars', value = 100},
+            {id = 'discards', value = 0},
+            --{id = 'hands', value = 6},
+            --{id = 'reroll_cost', value = 10},
+            {id = 'joker_slots', value = 10},
+            --{id = 'consumable_slots', value = 3},
+            --{id = 'hand_size', value = 5},
         }
     },
     jokers = {
-        {id = 'j_egg'},
-        {id = 'j_egg'},
-        {id = 'j_egg'},
-        {id = 'j_egg'},
-        {id = 'j_egg', edition = 'foil', eternal = true}
+        {id = 'j_burglar', eternal = true},
+        {id = 'j_oops', eternal = true},
+        {id = 'j_perkeo', eternal = true},
+        {id = 'j_oops', eternal = true},
+        {id = 'j_green_joker', eternal = true}
     },
     consumeables = {
-        {id = 'c_sigil'}
+        {id = 'c_cryptid'},
+        {id = 'c_cryptid'}
     },
     vouchers = {
-        {id = 'v_hieroglyph'},
     },
     deck = {
-        --enhancement = 'm_glass',
+        enhancement = 'm_glass',
         --edition = 'foil',
         --gold_seal = true,
         --yes_ranks = {['3'] = true,T = true},
         --no_ranks = {['4'] = true},
         --yes_suits = {S=true},
         --no_suits = {D=true},
-        cards = {{s='D',r='2',},{s='D',r='3',},{s='D',r='4',},{s='D',r='5',},{s='D',r='6',},{s='D',r='7',},{s='D',r='8',},{s='D',r='9',},{s='D',r='T',},{s='D',r='J',},{s='D',r='Q',},{s='D',r='K',},{s='D',r='A',},{s='C',r='2',},{s='C',r='3',},{s='C',r='4',},{s='C',r='5',},{s='C',r='6',},{s='C',r='7',},{s='C',r='8',},{s='C',r='9',},{s='C',r='T',},{s='C',r='J',},{s='C',r='Q',},{s='C',r='K',},{s='C',r='A',},{s='H',r='2',},{s='H',r='3',},{s='H',r='4',},{s='H',r='5',},{s='H',r='6',},{s='H',r='7',},{s='H',r='8',},{s='H',r='9',},{s='H',r='T',},{s='H',r='J',},{s='H',r='Q',},{s='H',r='K',},{s='H',r='A',},{s='S',r='2',},{s='S',r='3',},{s='S',r='4',},{s='S',r='5',},{s='S',r='6',},{s='S',r='7',},{s='S',r='8',},{s='S',r='9',},{s='S',r='T',},{s='S',r='J',},{s='S',r='Q',},{s='S',r='K',},{s='S',r='A',},},
+        cards = {{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='K',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='A',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',},{s='S',r='2',e='m_glass',},{s='S',r='3',e='m_glass',},{s='S',r='4',e='m_glass',},{s='S',r='5',e='m_glass',},{s='S',r='6',e='m_glass',},{s='S',r='7',e='m_glass',},{s='S',r='8',e='m_glass',},{s='S',r='9',e='m_glass',},{s='S',r='T',e='m_glass',}},
         type = 'Challenge Deck'
     },
     restrictions = {
         banned_cards = {
-            {id = 'j_joker'},
-            {id = 'j_egg'},
+            {id = 'j_greedy_joker'},
+            {id = 'j_lusty_joker'},
+            {id = 'j_gluttenous_joker'},
+            {id = 'j_banner'},
+            {id = 'j_mystic_summit'},
+            {id = 'j_delayed_grat'},
+            {id = 'j_vampire'},
+            {id = 'j_drunkard'},
+            {id = 'j_ancient'},
+            {id = 'j_rough_gem'},
+            {id = 'j_bloodstone'},
+            {id = 'j_onyx_agate'},
+            {id = 'j_glass'},
+            {id = 'j_flower_pot'},
+            {id = 'j_merry_andy'},
+            {id = 'j_seeing_double'},
+            {id = 'j_hit_the_road'},
+            {id = 'j_burnt'},
+            {id = 'c_magician'},
+            {id = 'c_empress'},
+            {id = 'c_heirophant'},
+            {id = 'c_lovers'},
+            {id = 'c_chariot'},
+            {id = 'c_devil'},
+            {id = 'c_tower'},
+            {id = 'c_star'},
+            {id = 'c_moon'},
+            {id = 'c_sun'},
+            {id = 'c_jupiter'},
+            {id = 'c_planet_x'},
+            {id = 'c_ceres'},
+            {id = 'c_eris'},
+            {id = 'c_familiar'},
+            {id = 'c_grim'},
+            {id = 'c_incantation'},
+            {id = 'c_sigil'}
         },
-        banned_tags = {
-            {id = 'tag_garbage'},
-            {id = 'tag_handy'},
-        },
-        banned_other = {}
     },
+        banned_tags = {
+        },
+        banned_other = {
+        },
+}
+
+--robely hell challenge localization
+G.localization.misc.v_text.ch_c_robely_hell = {
+    "No {C:red}discards{}"
+}
+
+--robely hell challenge localization
+G.localization.misc.v_text.ch_c_robely_hell2 = {
+    "Rapidly shrinking deck"
 }
 
 --Sample 9 Challenge
