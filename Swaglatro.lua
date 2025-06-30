@@ -458,46 +458,6 @@ start_runref(self, args)
             end
         end
     
-            
---                G.E_MANAGER:add_event(Event({
---                    func = function() 
---                    if G.GAME.blind:get_type() == 'Small' and G.GAME.blind:get_type() ~= 'Boss' and G.GAME.round_resets.blind_ante <= 8 then   
---                            print ("this is replaced with "..small_blind_set)
---                            G.GAME.blind.name = small_blind_set
---                            print ("the blind internal name is "..small_boss_name_trim)
---                            print ("Ante number is "..G.GAME.round_resets.blind_ante)
---                            print("The Ante description is as followed: ".."whatever the blind was randomly set to")
---                            print("The Ante name is as followed: "..selected_small_blind.name)
---                            --print("The Ante description is as followed: "..G.localization.descriptions.Blind..small_boss_name_trim.."name")
---                            print (G.GAME.blind.config.blind.key)
---                            return true
---                        end
---                            return false
---                        end,
---                    blocking = false
---                }))
---               G.E_MANAGER:add_event(Event({
---                  func = function() 
---                      if G.GAME.blind:get_type() == 'Big' and G.GAME.blind:get_type() ~= 'Boss' and G.GAME.round_resets.blind_ante <= 8 then
---                           print ("this is replaced with "..big_blind_set)
---                           G.GAME.blind.name = big_blind_set
---                           print ("the blind internal name is "..big_boss_name_trim)
---                          print ("Ante number is "..G.GAME.round_resets.blind_ante)
---                           print("The Ante description is as followed: ".."whatever the blind was randomly set to")
---                           print("The Ante name is as followed: "..selected_big_blind.name)
---                          --print("The Ante description is as followed: "..G.localization.descriptions.Blind..big_boss_name_trim.."name")
---                          print (G.GAME.blind.config.blind.key)
---                          return true
---                     end
---                            return false
---                       end,
---                    blocking = false
---                }))    
-         --end
---G.localization.descriptions.Blind..small_boss_name_trim     
---G.GAME.blind:get_type() == 'Small'
-
-
         --Oops all Nitro challenge modifiers
         --i just wanna make the background blue, thats it lol
         --for every blind during oops_nitro modifier(small, large, boss), make background blue and white. otherwise be normal
@@ -537,6 +497,44 @@ start_runref(self, args)
                 end
 
             end
+
+        if self.GAME.modifiers["robely_hell"] then
+            
+        local OldFunctionUI = ease_colour
+        local OldFunctionBG = ease_background_colour_blind
+
+            -- change background to set color
+            function ease_background_colour_blind(state, blind_override)
+                if self.GAME.modifiers["robely_hell"] then
+                    local blindname = ((blind_override or (G.GAME.blind and G.GAME.blind.name ~= '' and G.GAME.blind.name)) or 'Small Blind')
+                    local blindname = (blindname == '' and 'Small Blind' or blindname)
+
+                    --if blind is called Small Blind or Big Blind, change background
+                    if blindname == 'Small Blind' or blindname == 'Big Blind' or blindname == '' then
+                        ease_background_colour{new_colour = G.C.GREEN, special_colour = G.C.UI.TEXT_INACTIVE, tertiary_color = G.C.WHITE, contrast = 6}
+                    end
+                else 
+                    OldFunctionBG(state,blind_override)
+                end
+            end
+
+            --change ui to set color
+                function ease_colour(state, blind_override)
+                    if self.GAME.modifiers["robely_hell"] then
+                        local blindname = ((blind_override or (G.GAME.blind and G.GAME.blind.name ~= '' and G.GAME.blind.name)) or 'Small Blind')
+                        local blindname = (blindname == '' and 'Small Blind' or blindname)
+
+                        --if blind is called Small Blind or Big Blind, change ui
+                        if blindname == 'Small Blind' or blindname == 'Big Blind' or blindname == '' then
+                            ease_colour(G.C.DYN_UI.MAIN, G.C.GREEN)
+                        end
+                    else 
+                        OldFunctionUI(state,blind_override)
+                    end
+                end
+
+            end
+
         end
     end
 
