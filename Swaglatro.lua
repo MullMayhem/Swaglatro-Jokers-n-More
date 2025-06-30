@@ -1283,7 +1283,9 @@ SMODS.Challenge{
         banned_tags = {
             {id = 'tag_negative'},
         },
-        banned_other = {}
+        banned_other = {
+            {id = 'bl_final_leaf', type = 'blind'}
+        }
     },
 }
 
