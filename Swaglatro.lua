@@ -912,7 +912,7 @@ SMODS.Challenge{
             {id = 'j_abstract'},
             {id = 'j_scholar'},
             {id = 'j_mr_bones'},
-            {id = 'j_astronomer'},
+            {id = 'j_space'},
             {id = 'j_matador'},
             {id = 'j_ring_master'},
             {id = 'j_smeared'},
@@ -923,6 +923,10 @@ SMODS.Challenge{
             {id = 'j_luchador'},
             {id = 'j_caino'},
             {id = 'j_sly'},
+            {id = 'j_wily'},
+            {id = 'j_clever'},
+            {id = 'j_devious'},
+            {id = 'j_crafty'},
             {id = 'c_sun'},
             {id = 'c_world'},
             {id = 'c_strength'},
@@ -1229,38 +1233,34 @@ G.localization.misc.v_text.ch_c_robely_hell2 = {
     "Scoring won't be an issue... until you run out of cards..."
 }
 
---Sample 9 Challenge
+--Copy + Paste
 SMODS.Challenge{ 
-    loc_txt = "test10",
-    key = 'c_mod_swg_test_10',
+    loc_txt = "Copy + Paste",
+    key = 'c_mod_swg_copypaste',
     rules = {
         custom = {
-            {id = 'minus_jokers_per_dollar', value = 6},
-            {id = 'overflow_perishable'},
-            {id = 'anaglyph', value = localize{type = 'name_text', set = 'Tag', key = 'tag_investment', nodes = {}}, tag = 'investment'},
+            {id = 'copypaste'}
     },
         modifiers = {
-            {id = 'dollars', value = 100},
-            {id = 'discards', value = 1},
-            {id = 'hands', value = 6},
-            {id = 'reroll_cost', value = 10},
-            {id = 'joker_slots', value = 8},
-            {id = 'consumable_slots', value = 3},
-            {id = 'hand_size', value = 5},
+            --{id = 'dollars', value = 100},
+            --{id = 'discards', value = 1},
+            --{id = 'hands', value = 6},
+            --{id = 'reroll_cost', value = 10},
+            {id = 'joker_slots', value = 6},
+            --{id = 'consumable_slots', value = 3},
+            --{id = 'hand_size', value = 5},
         }
     },
     jokers = {
-        {id = 'j_egg'},
-        {id = 'j_egg'},
-        {id = 'j_egg'},
-        {id = 'j_egg'},
-        {id = 'j_egg', edition = 'foil', eternal = true}
+        {id = 'j_blueprint', eternal = true},
+        {id = 'j_blueprint', eternal = true},
+        {id = 'j_blueprint', eternal = true},
+        {id = 'j_blueprint', eternal = true},
+        {id = 'j_blueprint', eternal = true}
     },
     consumeables = {
-        {id = 'c_sigil'}
     },
     vouchers = {
-        {id = 'v_hieroglyph'},
     },
     deck = {
         --enhancement = 'm_glass',
@@ -1275,15 +1275,20 @@ SMODS.Challenge{
     },
     restrictions = {
         banned_cards = {
-            {id = 'j_joker'},
-            {id = 'j_egg'},
+            {id = 'j_brainstorm'},
+            {id = 'c_ectoplasm'},
+            {id = 'v_blank'}
         },
         banned_tags = {
-            {id = 'tag_garbage'},
-            {id = 'tag_handy'},
+            {id = 'tag_negative'},
         },
         banned_other = {}
     },
+}
+
+-- Localization for Copy + Paste
+G.localization.misc.v_text.ch_c_copypaste = {
+    "{C:inactive,s:0.6}Is the plural for Niko 'Nikos' or just 'Niko'?{}"
 }
 
 --Sample I'm da Boss!!! Challenge
