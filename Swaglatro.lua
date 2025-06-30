@@ -159,18 +159,19 @@ AltTexture({
 
 --this does nothing atm, just there for menu testing
 --if you are to implement planets, it would be a seperate texture sheet with only planet graphics that are changed. this is for mod compatibility
---AltTexture({ 
---    key = 'SwagPlanets',
---    set = 'Planet',
---    path = 'Tarots.png',
---    original_sheet = true,
---    localization = true,
---    keys = {       
---    },
---    loc_txt = {
---        name = "Planets (None)"
---    }
---})
+AltTexture({ 
+    key = 'SwagPlanets',
+    set = 'Planet',
+    path = 'Tarots.png',
+    original_sheet = true,
+    localization = true,
+    keys = { 
+        "c_jupiter"
+    },
+    loc_txt = {
+        name = "Planets"
+    }
+})
 
 --this does nothing atm, just there for menu testing
 --if you are to implement spectrals, have a seperate sheet from 'SwagPlanets' with just spectral cards. this is for mod compatibility
@@ -288,7 +289,7 @@ TexturePack{ --last entry is top of list, first entry is bottom of list
     textures = {
     'swagtro_j_SwagJokers',
     'swagtro_j_SwagLegends',
---    'swagtro_j_SwagPlanets',
+    'swagtro_j_SwagPlanets',
     'swagtro_j_SwagSpectrals',
     'swagtro_j_SwagTarots',
     'swagtro_j_SwagAltSpades',
