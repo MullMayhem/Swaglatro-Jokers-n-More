@@ -1,0 +1,53 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 348
+
+# Turn Jimbo into Jolly Joker
+[[patches]]
+[patches.pattern]
+target = "card_character.lua"
+pattern = 'self.children.card = Card(self.T.x, self.T.y, G.CARD_W, G.CARD_H, G.P_CARDS.empty, args.center or G.P_CENTERS.j_joker, {bypass_discovery_center = true})'
+position = "at"
+payload = '''
+local Swagjokers = {'j_caino','j_chicot','j_perkeo','j_triboulet','j_yorick','j_burnt','j_trading'}
+local Swagrandomjokers = Swagjokers[math.random(#Swagjokers)]
+
+self.children.card = Card(self.T.x, self.T.y, G.CARD_W, G.CARD_H, G.P_CARDS.empty, args.center or G.P_CENTERS[Swagrandomjokers], {bypass_discovery_center = true})
+'''
+match_indent = true
+
+# Add More Win Quotes
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "Jimbo:add_speech_bubble('lq_'..math.random(1,10), nil, {quip = true})"
+position = "at"
+payload = '''
+local range_start = 1
+local range_end = 10
+if localize('wq_25') then
+    range_end = 25
+end
+
+Jimbo:add_speech_bubble('lq_'..math.random(range_start, range_end), nil, {quip = true})
+'''
+match_indent = true
+times = 1
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "Jimbo:add_speech_bubble('wq_'..math.random(1,7), nil, {quip = true})"
+position = "at"
+payload = '''
+local range_start = 1
+local range_end = 10
+if localize('wq_25') then
+    range_end = 25
+end
+
+Jimbo:add_speech_bubble('wq_'..math.random(range_start,range_end), nil, {quip = true})
+'''
+match_indent = true
+times = 1
