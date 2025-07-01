@@ -12,7 +12,7 @@ edits and code by MulliganMayhem.
 ## Key Features
 	-Joker Replacement
 	-Minor text replacement
-	-Custom Challenge (8/10 done)
+	-Custom Challenges (10 of them!)
  	-Card variants for High Contrast consistency
 	-and more
 
