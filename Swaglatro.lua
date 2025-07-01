@@ -197,14 +197,16 @@ AltTexture({
     set = 'Tarot',
     path = 'Tarots.png',
     original_sheet = true,
-    localization = true,
     keys = { 
     "c_moon",
     "c_sun"
     },
     loc_txt = {
         name = "Consumables"
-    }
+    },
+    localization = { -- keys of objects with new localizations
+        c_sun = {name = 'The Sunn'}
+     }
 })
 
 
@@ -635,7 +637,7 @@ SMODS.Challenge{
 
 --Gluttony Challenge
 SMODS.Challenge{ 
-    loc_txt = "Gluttenous Greed",
+    loc_txt = "Gluttonous Greed",
     key = 'c_mod_swg_glutton',
     rules = {
         custom = {
