@@ -3,7 +3,7 @@ version = "1.0.0"
 dump_lua = true
 priority = 348
 
-# Turn Jimbo into Jolly Joker
+# Turn Jimbo into Random Joker from list
 [[patches]]
 [patches.pattern]
 target = "card_character.lua"
